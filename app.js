@@ -3,6 +3,8 @@ var sec = 0;
 var miliSec = 0;
 var timer;
 
+
+// Timer function 
 function callTimer() {
   miliSec++;
   if (miliSec < 100) {
@@ -21,16 +23,21 @@ function callTimer() {
 }
 
 
+// function for start button
 function start() {
   document.getElementById("start").disabled = true;
   timer = setInterval(callTimer, 10);
 }
 
+
+// function for stop button
 function stop() {
   document.getElementById("start").disabled = false;
   clearInterval(timer);
 }
 
+
+// function for reset button
 function reset() {
   stop();
   min = 0;
